@@ -1,5 +1,8 @@
-----
-layout: page
+---
 title: "Resume"
-permalink: "/resume/"
-____
+description: "Work History"
+permalink: /resume/
+layout: page  
+---
+
+# Resume
