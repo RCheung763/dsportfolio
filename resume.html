@@ -1,12 +1,25 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: 'en-US' }}">
+<html lang="en">
 <head>
-  <meta charset="UTF-8>
-  <meta=name="viewport content="width-device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-  <head>
-  <body>
-    <p>Working Resume</p>
-  </body>
-  </html>
+  <style>
+    /* Banner*/
+    .banner {
+      padding: 60px; 
+      text-align: center;
+      background-image: linear-gradient(to right, #6b9080, #a4c3b2);
+      font-size: 30px;  
+    }
+  </style>
+</head>
+<body>
+  <div class="banner"> 
+    <h1>Header</h1>
+    <p>My supercool header</p>
+  </div>
+  <p>Working Resume</p>
+</body>
+</html>
 
