@@ -3,3 +3,5 @@ description: Data Science / Data Analytics
 show_downloads: false
 google_analytics:
 theme: jekyll-theme-cayman
+baseurl: ""
+url: "https://rcheung763.github.io"
