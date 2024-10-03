@@ -106,8 +106,14 @@ a {
 }
 
 .page-header {
-  text-align: center;
-  background-image: url(../../images/ranierbanner.png);
+  color: $header-heading-color; /* Sets the text color for the header using a variable defined elsewhere */
+  text-align: center; /* Centers the text within the header */
+  background-color: $header-bg-color; /* Sets a fallback background color for the header */
+  background-image: url(../images/ranierbanner.png); /* Specifies the image to use as the background */
+  background-size: cover; /* Ensures the background image covers the entire header area */
+  background-position: center; /* Centers the background image within the header */
+  height: 300px; /* Sets a fixed height for the header */
+};
 
 
   @include large {
