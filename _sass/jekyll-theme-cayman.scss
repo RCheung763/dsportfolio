@@ -106,8 +106,14 @@ a {
 }
 
 .page-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../images/ranierbanner.png);
+  background-position: center center;
+  background-size: cover;
+  background-attachment: scroll;
   text-align: center;
-  background-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
   background-color: $header-bg-color;
   color: $header-heading-color;
 };
