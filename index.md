@@ -2,7 +2,6 @@
 layout: default
 ---
 
-# Ruby Cheung
 
 About me 
 
