@@ -17,13 +17,11 @@
   <body>
     <a id="skip-to-content" href="#content">Skip to the content.</a>
     
-<img src="images/profile1.png" alt="Profile Picture" class="round-icon">
-    
 <header class="page-header" role="banner">
   <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
   <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
 
-  <!-- Adding custom buttons for Resume, Projects, and Publications -->
+  
   <a href="/resume/" class="btn">Resume</a>
   <a href="/projects/" class="btn">Projects</a>
   <a href="/publications/" class="btn">Publications</a>
@@ -41,8 +39,9 @@
           
       </ul>
   </div>
-
+  
     <main id="content" class="main-content" role="main">
+      <img src="images/profile1.png" alt="Profile Picture" class="round-icon">
       {{ content }}
 
       <footer class="site-footer">
