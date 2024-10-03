@@ -4,7 +4,7 @@ layout: default
 
 
 
-# About me 
+## About me 
 
 Hello there, I'm Ruby! I am a student in my final year of the MS Data Science program at Seattle University. I am very excited for graduation this coming spring. I also have a bachelor's in Economics from St. Catherine University. Currently I am the Insitutional Research Analyst at Wabash College located in Indiana. I am also working as graduate research assistant in the mathmatics department at Seattle U. I have a total of 5 years of experience in research and analytical work. 
 
