@@ -109,7 +109,9 @@ a {
   color: $header-heading-color;
   text-align: center;
   background-color: $header-bg-color;
-  background-image: url(../images/rainierbanner.jpg);
+  background-image: url(/images/rainierbanner.jpg);
+  background-size: cover;
+  background-position: center;
   
   @include large {
     padding: 5rem 6rem;
