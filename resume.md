@@ -1,7 +1,7 @@
 ---
 title: "Resume"
 description: "Work History"
-permalink: /resume/
+permalink: "/resume/"
 layout: page  
 ---
 
