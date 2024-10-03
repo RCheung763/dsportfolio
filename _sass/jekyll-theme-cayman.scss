@@ -108,12 +108,8 @@ a {
 .page-header {
   color: $header-heading-color;
   text-align: center;
-  background-color: $header-bg-color; /* Keep if you want a fallback color */
-  background-image: url('/images/ranierbanner.png'); /* Replace with your image path */
-  background-size: cover; /* Optional: Makes the image cover the entire header */
-  background-position: center; /* Optional: Centers the image */
-};
-
+  background-color: $header-bg-color;
+  background-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
 
   @include large {
     padding: 5rem 6rem;
