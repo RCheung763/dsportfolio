@@ -40,9 +40,13 @@
     body{
       font-family: 'Open Sans';
     }
-    .p-top {
-      
-    }
+    .centered-flexbox {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 200px; /* Example height */
+    background-color: white; 
+  }
   </style>
 </head>
 <body>
@@ -53,10 +57,9 @@
     <a href="/projects.html" class="btn">Projects</a>
     <a href="/publications.html" class="btn">Publications</a>
   </div>
-  <div style="text-align:center">
-    This text will be centered.
-    <p>So will this paragraph.</p>
-</div>
+  <div class="centered-flexbox">
+    Work History
+  </div>
 </body>
 </html>
 
