@@ -430,3 +430,14 @@ a {
 .site-footer-credits {
   color: $blockquote-text-color;
 }
+
+@media (max-width: 768px) {
+  #container {
+    flex-direction: column; /* Stack sidebar and main content */
+  }
+
+  #sidebar {
+    width: 100%; /* Make sidebar full-width */
+    margin-bottom: 20px; /* Space between sidebar and content */
+  }
+}
