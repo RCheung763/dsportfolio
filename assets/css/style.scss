@@ -4,9 +4,14 @@
 @import 'jekyll-theme-cayman';
 
 .round-icon {
-    width: 120px; /* Adjust size as needed */
-    height: 120px; /* Ensure height and width are the same for a round shape */
-    border-radius: 50%; /* Makes the image round */
-    object-fit: cover; /* Ensures the image covers the area without distortion */
+    width: 120px; 
+    height: 120px;
+    border-radius: 50%; 
+    object-fit: cover; 
 }
 
+.page-header {
+  color: $header-heading-color;
+  text-align: center;
+  background-color: $header-bg-color;
+  background-image: url(../images/ranierbanner.png);
