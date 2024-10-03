@@ -107,9 +107,8 @@ a {
 
 .page-header {
   text-align: center;
-  background-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
-  background-color: $header-bg-color;
-  color: $header-heading-color;
+  background-image: url("../images/ranierbanner.png");
+
 
   @include large {
     padding: 5rem 6rem;
