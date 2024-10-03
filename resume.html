@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
-  <head>
+<html lang="{{ site.lang | default: 'en-US' }}">
+<head>
     <meta charset="UTF-8">
-
-{% seo %}
+    {% seo %}
     <link rel="stylesheet" href="css/academicons.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
@@ -13,25 +12,40 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <script src="https://kit.fontawesome.com/e14cba48a4.js" crossorigin="anonymous"></script>
     {% include head-custom.html %}
-  </head>
-  <body>
+</head>
+<body>
     <a id="skip-to-content" href="#content">Skip to the content.</a>
     
-<header class="page-header2" role="banner">
-  <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
-  <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
+    <header class="page-header" role="banner">
+        <h1 class="project-name">{{ page.title | default: 'New Page Title' }}</h1>
+        <h2 class="project-tagline">{{ page.description | default: 'Description of the new page' }}</h2>
+        
+        <a href="/dsportfolio/resume.html" class="btn">Resume</a>
+        <a href="/projects.html" class="btn">Projects</a>
+        <a href="/publications.html" class="btn">Publications</a>
+    </header>
 
-  
-  <a href = "/dsportfolio/" class="btn">About Me</a>
-  <a href="/projects.html" class="btn">Projects</a>
-  <a href="/publications.html" class="btn">Publications</a>
-</header>
-
-  <div id="container">
-  
-Work History
-
-    </main>
-  </div>
+    <div id="container">
+        <div id="sidebar">
+            <ul>
+                <li><a><i class="fas fa-map-marker-alt"></i> Seattle, WA</a></li>
+                <li><a><i class="fas fa-briefcase"></i> Wabash College</a></li>
+                <li><a href="mailto:ccheung6@seattleu.edu"><i class="fa-solid fa-envelope"></i> Email</a></li>
+                <li><a href="https://github.com/RCheung763/"><i class="fa-brands fa-github"></i> GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/rubyccheung"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></li>
+                <li><a href="https://www.researchgate.net/profile/Ruby-Cheung-6"><span class="ai ai-researchgate"></span> ResearchGate</a></li>
+                <li><a href="/dsportfolio/resume.html">Resume</a></li>
+            </ul>
+        </div>
+        
+        <main id="content" class="main-content" role="main">
+            <h2>My Unique Content Title</h2>
+            <p>This is where you can place the main content for your new page. Add any text, images, or other elements that are specific to this page.</p>
+            <p>Feel free to structure this section with additional HTML elements as needed, such as lists, images, or sections.</p>
+            <img src="images/your-new-image.png" alt="Description of the image" class="round-icon">
+            <!-- Add more content here -->
+        </main>
+    </div>
 </body>
 </html>
+
