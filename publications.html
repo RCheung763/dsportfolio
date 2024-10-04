@@ -96,6 +96,44 @@
       text-decoration: none;
       color: gray; 
     }
+    .image-icon {
+    display: inline-block;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.icon {
+    width: 100px; /* Set a width for the icon */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.expanded-image {
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.expanded-image img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+
   </style>
 </head>
 <body>
@@ -111,8 +149,29 @@
 
   <div class="container">
     <div class="centered-flexbox">
-      
+      <div class="image-icon">
+        <img src="{{ site.baseurl }}/images/example.jpg" alt="Example Image" class="icon" onclick="expandImage(this)">
+          </div>
+
+      <div class="expanded-image" style="display:none;">
+        <span class="close" onclick="closeImage()">×</span>
+          <img id="expandedImg" src="" alt="Expanded Image">
+            </div>
     </div>
   </div>
 </body>
 </html>
+
+<script>
+function expandImage(img) {
+    const expandedImg = document.getElementById("expandedImg");
+    const expandedDiv = document.querySelector(".expanded-image");
+    expandedImg.src = img.src; // Set the expanded image source to the clicked image source
+    expandedDiv.style.display = "flex"; // Show the expanded image div
+}
+
+function closeImage() {
+    const expandedDiv = document.querySelector(".expanded-image");
+    expandedDiv.style.display = "none"; // Hide the expanded image div
+}
+</script>
