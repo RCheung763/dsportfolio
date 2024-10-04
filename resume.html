@@ -14,13 +14,15 @@
       font-family: 'Open Sans';
       margin: 0;
       padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    }
+    .banner-background {
+      width: 100%;
+      background-image: linear-gradient(to right, #6b9080, #a4c3b2);
     }
     .container {
       width: 100%;
       max-width: 900px;
+      margin: 0 auto;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -30,7 +32,6 @@
       width: 100%;
       padding: 5px; 
       text-align: center;
-      background-image: linear-gradient(to right, #6b9080, #a4c3b2);
       font-size: 20px;
     }
     .resume-title {
@@ -98,13 +99,17 @@
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="banner"> 
-      <a href="/dsportfolio/" class="btn">About Me</a>
-      <a href="/projects.html" class="btn">Projects</a>
-      <a href="/publications.html" class="btn">Publications</a>
+  <div class="banner-background">
+    <div class="container">
+      <div class="banner"> 
+        <a href="/dsportfolio/" class="btn">About Me</a>
+        <a href="/projects.html" class="btn">Projects</a>
+        <a href="/publications.html" class="btn">Publications</a>
+      </div>
     </div>
+  </div>
 
+  <div class="container">
     <div class="centered-flexbox">
       <!-- Resume at a glance -->
       <div class="r1">Resume at a glance</div>
