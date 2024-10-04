@@ -38,22 +38,32 @@
     .btn:hover {
       background-color: rgba(255, 255, 255, 0.1);  
     }
-    body{
+    body {
       font-family: 'Open Sans';
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      padding: 0;
     }
-  .centered-flexbox {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    align-items: center; 
-    margin-top: 15px; 
-    padding: 20px;
-    max-width: 900px; 
-  }
+    .centered-flexbox {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; 
+      align-items: center; 
+      margin-top: 15px; 
+      padding: 20px;
+      max-width: 900px; 
+      width: 100%;
+    }
+    .content-wrapper {
+      width: 100%;
+    }
     .r1 {
       font-size: 30px;
       font-weight: bold;
       margin-bottom: 5px;
+      text-align: center;
     }
     .r2 {
       font-size: 20px;
@@ -72,18 +82,22 @@
     .link {
       font-size: 12px;
       margin-bottom: 5px;
-      color: rgba(255, 255, 255, 0.7);
+      color: rgba(0, 0, 0, 0.7);
       text-decoration: none;
       width: auto;
+      text-align: center;
     }
     .link a:hover {
-    text-decoration: none;
-    color: gray; 
+      text-decoration: none;
+      color: gray; 
     }
-    
+    .banner, .centered-flexbox {
+      width: 100%;
+      max-width: 900px;
+    }
   </style>
 </head>
-  <body>
+<body>
   <div class="banner"> 
     <a href="/dsportfolio/" class="btn">About Me</a>
     <a href="/projects.html" class="btn">Projects</a>
@@ -91,49 +105,50 @@
   </div>
 
   <div class="centered-flexbox">
-    
-    <!-- Resume at a glance -->
-    <div class="r1">Resume at a glance</div>
-    
-    <!-- Centered link -->
-    <div class="link">
-      <a href="dsportfolio/Cheung_24Resume.pdf" target="_blank">
-        <i class="fas fa-print"></i> Print/Download Full PDF
-      </a>
-    </div>
+    <div class="content-wrapper">
+      <!-- Resume at a glance -->
+      <div class="r1">Resume at a glance</div>
+      
+      <!-- Centered link -->
+      <div class="link">
+        <a href="dsportfolio/Cheung_24Resume.pdf" target="_blank">
+          <i class="fas fa-print"></i> Print/Download Full PDF
+        </a>
+      </div>
 
-    <!-- Graduate Research Assistant -->
-    <div class="r2">
-      <i class="fas fa-briefcase"></i> Graduate Research Assistant
-    </div>
-    <div class="r3">Seattle University, Seattle, Washington | June 2024 – Present</div>
-    <div class="r4">
-      • Built and deployed NLP models to conduct sentiment analysis on comments submitted to carnivorespotter.com.<br>
-      • Cleaned and pre-processed unstructured text data.<br>
-      • Implemented testing and validation procedures to ensure accurate results, currently at 76% accuracy.
-    </div>
+      <!-- Graduate Research Assistant -->
+      <div class="r2">
+        <i class="fas fa-briefcase"></i> Graduate Research Assistant
+      </div>
+      <div class="r3">Seattle University, Seattle, Washington | June 2024 – Present</div>
+      <div class="r4">
+        • Built and deployed NLP models to conduct sentiment analysis on comments submitted to carnivorespotter.com.<br>
+        • Cleaned and pre-processed unstructured text data.<br>
+        • Implemented testing and validation procedures to ensure accurate results, currently at 76% accuracy.
+      </div>
 
-    <!-- Institutional Research Analyst -->
-    <div class="r2">
-      <i class="fas fa-briefcase"></i> Institutional Research Analyst
-    </div>
-    <div class="r3">Wabash College, Crawfordsville, Indiana | November 2022 – Present</div>
-    <div class="r4">
-      • Compile, organize, and analyze data to generate comprehensive reports for submission to state agencies and external entities.<br>
-      • Conduct ad-hoc analytical reports for various departments across the college.<br>
-      • Develop interactive dashboards tracking key performing indicators such as retention and completion rates.
-    </div>
+      <!-- Institutional Research Analyst -->
+      <div class="r2">
+        <i class="fas fa-briefcase"></i> Institutional Research Analyst
+      </div>
+      <div class="r3">Wabash College, Crawfordsville, Indiana | November 2022 – Present</div>
+      <div class="r4">
+        • Compile, organize, and analyze data to generate comprehensive reports for submission to state agencies and external entities.<br>
+        • Conduct ad-hoc analytical reports for various departments across the college.<br>
+        • Develop interactive dashboards tracking key performing indicators such as retention and completion rates.
+      </div>
 
-    <!-- Economic Research Specialist -->
-    <div class="r2">
-      <i class="fas fa-briefcase"></i> Economic Research Specialist
-    </div>
-    <div class="r3">St. Catherine University | June 2020 – August 2022</div>
-    <div class="r4">
-      • Headed economics research teams on multiple research projects focused on development economics and labor markets in North Africa and the Middle East.<br>
-      • Conducted data analysis employing regression models, including multinomial, Logit, and Tobit models to predict employment rates.<br>
-      • Created new census maps for the country of Sudan using GIS software.<br>
-      • Designed survey instruments using ODK-X for android-based data collection, integrating SQLite database functionality for seamless data management.
+      <!-- Economic Research Specialist -->
+      <div class="r2">
+        <i class="fas fa-briefcase"></i> Economic Research Specialist
+      </div>
+      <div class="r3">St. Catherine University | June 2020 – August 2022</div>
+      <div class="r4">
+        • Headed economics research teams on multiple research projects focused on development economics and labor markets in North Africa and the Middle East.<br>
+        • Conducted data analysis employing regression models, including multinomial, Logit, and Tobit models to predict employment rates.<br>
+        • Created new census maps for the country of Sudan using GIS software.<br>
+        • Designed survey instruments using ODK-X for android-based data collection, integrating SQLite database functionality for seamless data management.
+      </div>
     </div>
   </div>
 </body>
