@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -107,42 +105,51 @@
       margin-top: 10px;
     }
     .image-row {
-    display: flex;
-    gap: 10px; /* Adds a 10px gap between the images */
-  }
+      display: flex;
+      gap: 10px; /* Adds a 10px gap between the images */
+    }
 
-  .image-row img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-  }  
-  .icon-row {
-    display: flex;
-    justify-content: flex-end;  
-    gap: 15px;
-    align-items: center; 
-    margin-right: 20px;
-  }
+    /* Enlarging images on hover */
+    .image-row img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      transition: transform 0.3s ease; /* Adds smooth transition */
+    }
 
-  .icon-row a {
-    color: black;
-    text-decoration: none;
-  }
+    .image-row img:hover {
+      transform: scale(1.2); /* Scales image to 120% on hover */
+    }
 
-  .icon-row i {
-    font-size: 20px;
-  }
-  .link {
-    font-size: 12px;
-    margin-bottom: 20px;
-    color: rgba(0, 0, 0, 1);
-    text-decoration: none;
-    width: auto;
-  }
-  .link a:hover {
-    text-decoration: none;
-    color: gray; 
-  }
+    .icon-row {
+      display: flex;
+      justify-content: flex-end;  
+      gap: 15px;
+      align-items: center; 
+      margin-right: 20px;
+    }
+
+    .icon-row a {
+      color: black;
+      text-decoration: none;
+    }
+
+    .icon-row i {
+      font-size: 20px;
+    }
+
+    .link {
+      font-size: 12px;
+      margin-bottom: 20px;
+      color: rgba(0, 0, 0, 1);
+      text-decoration: none;
+      width: auto;
+    }
+
+    .link a:hover {
+      text-decoration: none;
+      color: gray; 
+    }
   </style>
 </head>
 <body>
@@ -155,6 +162,7 @@
       </div>
     </div>
   </div>
+
   <div class="icon-row">
       <a href="https://www.researchgate.net/profile/Ruby-Cheung-6" target="_blank">
         <i class="ai ai-researchgate"></i> ResearchGate
@@ -163,54 +171,53 @@
         <i class="fas fa-university"></i> ERF
       </a>
   </div>
-      <div class="centered-flexbox">
-      <div class="r4">Select publications from my work in economics</div>
-      <div class="r2">Introducing the Sudan Labor Market Panel Survey 2022</div>
-        <div class="r3"><em>Published August 2023</em></div>
-        <div class="r3">Caroline Krafft, Ruby Cheung, and Ragui Assaad.</div>
-        <div class="image-row">
-          <img src="/dsportfolio/images/map1.png" alt="SLMPS Image 1">
-          <img src="/dsportfolio/images/map2.png" alt="SLMPS Image 2">
-          <img src="/dsportfolio/images/slmps1.png" alt="SLMPS Image 3">
-          <img src="/dsportfolio/images/slmps2.png" alt="SLMPS Image 4">
-        </div>
-        <div class="link">
-          <a href="/dsportfolio/pubs/KrafftAssaadCheungWP2023.pdf" target="_blank">
-            <i class="fas fa-print"></i> Print/Download Full PDF
-          </a>
-        </div>
 
-        <div class="r2">Regional Overview: Economic Growth and Labour Market Outcomes in North Africa(2018-21)</div>
-        <div class="r3"><em>Published October 2022</em></div>
-        <div class="r3">Caroline Krafft, Ragui Assad, Mohammed Ali Marouani, Ruby Cheung</div>
-        <div class="image-row">
-          <img src="/dsportfolio/images/econplot1.png" alt="Econ Image 1">
-          <img src="/dsportfolio/images/econplot2.png" alt="Econ Image 2">
-          <img src="/dsportfolio/images/econplot3.png" alt="Econ Image 3">
-          <img src="/dsportfolio/images/econplot4.png" alt="Econ Image 4">
-        </div>
-        <div class="link">
-          <a href="/dsportfolio/pubs/AWDA2fullreport.pdf" target="_blank">
-            <i class="fas fa-print"></i> Print/Download Full PDF
-          </a>
-        </div>
-          
-        <div class="r2">Academic Challenges in the Time of COVID-19:Arab Social Scientist and Humanist in Focus</div>
-        <div class="r3"><em>Published December 2020</em></div>
-        <div class="r3">Caroline Krafft, Ruby Cheung</div>
-        <div class="image-row">
-          <img src="/dsportfolio/images/covidplot1.png" alt="COVID Image 1">
-          <img src="/dsportfolio/images/covidplot2.png" alt="COVID Image 2">
-          <img src="/dsportfolio/images/covidplot3.png" alt="COVID Image 3">
-        </div>
-        <div class="link">
-          <a href="/dsportfolio/pubs/COVID-19-Survey-Report_DEC2020.pdf" target="_blank">
-            <i class="fas fa-print"></i> Print/Download Full PDF
-          </a>
-        </div>
-            
-          </div>
+  <div class="centered-flexbox">
+    <div class="r4">Select publications from my work in economics</div>
+    <div class="r2">Introducing the Sudan Labor Market Panel Survey 2022</div>
+    <div class="r3"><em>Published August 2023</em></div>
+    <div class="r3">Caroline Krafft, Ruby Cheung, and Ragui Assaad.</div>
+    <div class="image-row">
+      <img src="/dsportfolio/images/map1.png" alt="SLMPS Image 1">
+      <img src="/dsportfolio/images/map2.png" alt="SLMPS Image 2">
+      <img src="/dsportfolio/images/slmps1.png" alt="SLMPS Image 3">
+      <img src="/dsportfolio/images/slmps2.png" alt="SLMPS Image 4">
+    </div>
+    <div class="link">
+      <a href="/dsportfolio/pubs/KrafftAssaadCheungWP2023.pdf" target="_blank">
+        <i class="fas fa-print"></i> Print/Download Full PDF
+      </a>
+    </div>
+
+    <div class="r2">Regional Overview: Economic Growth and Labour Market Outcomes in North Africa(2018-21)</div>
+    <div class="r3"><em>Published October 2022</em></div>
+    <div class="r3">Caroline Krafft, Ragui Assad, Mohammed Ali Marouani, Ruby Cheung</div>
+    <div class="image-row">
+      <img src="/dsportfolio/images/econplot1.png" alt="Econ Image 1">
+      <img src="/dsportfolio/images/econplot2.png" alt="Econ Image 2">
+      <img src="/dsportfolio/images/econplot3.png" alt="Econ Image 3">
+      <img src="/dsportfolio/images/econplot4.png" alt="Econ Image 4">
+    </div>
+    <div class="link">
+      <a href="/dsportfolio/pubs/AWDA2fullreport.pdf" target="_blank">
+        <i class="fas fa-print"></i> Print/Download Full PDF
+      </a>
+    </div>
+    
+    <div class="r2">Academic Challenges in the Time of COVID-19:Arab Social Scientist and Humanist in Focus</div>
+    <div class="r3"><em>Published December 2020</em></div>
+    <div class="r3">Caroline Krafft, Ruby Cheung</div>
+    <div class="image-row">
+      <img src="/dsportfolio/images/covidplot1.png" alt="COVID Image 1">
+      <img src="/dsportfolio/images/covidplot2.png" alt="COVID Image 2">
+      <img src="/dsportfolio/images/covidplot3.png" alt="COVID Image 3">
+    </div>
+    <div class="link">
+      <a href="/dsportfolio/pubs/COVID-19-Survey-Report_DEC2020.pdf" target="_blank">
+        <i class="fas fa-print"></i> Print/Download Full PDF
+      </a>
     </div>
   </div>
 </body>
 </html>
+
