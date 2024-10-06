@@ -1,1 +1,7 @@
-this is stuff about projects
+---
+layout: default
+title: Projects
+---
+# My Projects
+
+Content of the projects markdown file.
