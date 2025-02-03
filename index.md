@@ -4,13 +4,16 @@ title: "Ruby Cheung"
 ---
 
 
-## About me 
+## Hello There!
 
-Hello there, I'm Ruby! I am a student in my final year of the MS Data Science program at Seattle University. I hold a bachelor's in Economics from St. Catherine University. Currently, I am the Insitutional Research Analyst at Wabash College located in Indiana and also work as a graduate research assistant in the mathematics department at Seattle U. I have a total of 5 years of experience in research and analytical work. 
+Thank you for visitng my portfolio page! I am a Data Science Master Student at Seattle University, expected to graduate June 2025. I recieved my Bachelor's degress in Economics from St. Catherine's University. I am excited to share with you some of my work in extracting actionable insight from complex datasets.
 
-I have worked on projects in a variety of subject areas using structured and unstructured data. Some memorable projects include The Sudan Panel Survey and working with the St. Paul Public School System studying the affects of early start times. I am passionate about machine learning, building predictive models, causal analysis, experimenting with cutting edge AI tools, extracting actionable insights, and data storytelling.  
+My skills include proficiency in:
+- R, Python, complex SQL queries
+- Descriptive and inferential statistics, regression analysis, and time series forecasting
+- Machine learning and deep learning techniques
+- Building dashboards with key performance indicators to support data-driven decision-making
 
-I am excited to share some of my work with you. Please do not hesitate to reach out to connect! 
 
 
 
