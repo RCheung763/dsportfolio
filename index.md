@@ -16,7 +16,7 @@ My skills include proficiency in:
 - Econometrics and policy evaluation
 - Data storytelling
 
-I’m passionate to bridge the gap between data science, data analytics, and strategic decision-making. For a look at my work experience head to Resume page, and if you want to check out some of the publications I've had the opportunity to work on head to publications.
+I’m passionate about bridging the gap between data science, data analytics, and strategic decision-making. For a look at my work experience head to Resume page, and if you want to check out some of the publications I've had the opportunity to work on head to publications.
 
 Feel free to reach out and let me help you turn your data into insight!
 
