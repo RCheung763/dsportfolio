@@ -10,7 +10,6 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap">
   <script src="https://kit.fontawesome.com/e14cba48a4.js" crossorigin="anonymous"></script>
   <style>
-    /* Banner*/
     .banner {
       padding: 5px; 
       text-align: center;
@@ -154,7 +153,20 @@
   
   <div id="forecasting-content" style="display: none;">
     <div class="container">
-      <p>This is the Forecasting section.</p>
+      <div class="centered-flexbox">
+        <div class="r2"><u>Evaluating Forecasting Models for Predicting Gross Gaming Revenue</u></div>
+        
+          <div class="icon-solo">
+            <a href="https://github.com/RCheung763/Time-Series-Anaylsis-Louisiana-Gaming-Revenue"><i class="fa-brands fa-github"></i> Forecasting Repo</a>
+          </div> 
+        
+        <div class="r3">
+          The objective of this project is to evaluate and compare forecasting methods to achieve the highest accuracy forecast of the monthly revenue of Harrah’s casino located in New Orleans, Louisiana. 
+          The models considered are ARIMA, ETS, GARCH, and Meta’s Prophet.This dataset posed an interesting problem as it contains two back-to-back outliers. One was a result of COVID lockdown in the spring of 2020 and the second was a result of Hurricane Ida the following year. Outlier detection and imputation was done to handle these shocks. 
+          The best performing model was the ARIMA model achieving a low RMSE and a MAPE of 12.3%.
+        </div>
+        
+      </div>
     </div>
   </div>
   
@@ -162,9 +174,11 @@
     <div class="container">
       <div class="centered-flexbox">
         <div class="r2"><u>Predicting Recidivism Among Georgia Parolees</u></div>
+        
         <div class="icon-solo">
           <a href="https://github.com/RCheung763/Recidivism"><i class="fa-brands fa-github"></i> Recidivism Repo</a>
         </div>
+        
         <div class="r3">
           The objective of this project was develop a model that could predict recidivism among parolees and identify key factors that contributing to repeat offenses, with the goal of informing policies that reduce the likelihood of reoffending. 
           A focus was made on not only accuracy but importantly reducing the rates of false positive. Gradient boosting and SVM models are developed for this purpose. 
@@ -173,6 +187,7 @@
           Gang affiliation, average number of days on parole between drug tests and supervision score also ranked high in the models. Of the three SVM models run (linear, radial basis and polynomial kernels), 
           the linear SVM produced the highest accuracy rate and the lowest false positive rate 33%.
         </div>
+        
         <div class="iframe-container">
             <iframe class="iframe" src="/dsportfolio/project_docs/Recidivism_paper.pdf" width="900" height="400" style="border:none;"></iframe>
         </div> 
