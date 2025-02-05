@@ -152,24 +152,26 @@
     <a href="javascript:void(0);" class="btn2" onclick='toggleContent('ml-content')>Machine Learning</a>
   </div>
 
-  <div class="container">
-    <div class="centerd-flexbox">
-      <div class="r2"><u>Predicting Recidivism Among Georgia Parolees</u></div>
-      <div class="icon-solo">
-        <a href="https://github.com/RCheung763/Recidivism"><i class="fa-brands fa-github"></i> Recidivism Repo</a>
-      </div>
-      <div class="r3">
-        The objective of this project was develop a model that could predict recidivism among parolees and identify key factors that contributing to repeat offenses, with the goal of informing policies that reduce the likelihood of reoffending. 
-        A focus was made on not only accuracy but importantly reducing the rates of false positive. Gradient boosting and SVM models are developed for this purpose. 
-        A binary and multi-class classification gradient boosting models were used to indicate if a person would reoffend and if so would they reoffend in one, two or three years. 
-        Both the binary and multi-class classification models indicated similar top variables for determining recidivism. The top two variables were percentage of days employed and jobs per year. 
-        Gang affiliation, average number of days on parole between drug tests and supervision score also ranked high in the models. Of the three SVM models run (linear, radial basis and polynomial kernels), 
-        the linear SVM produced the highest accuracy rate and the lowest false positive rate 33%.
-      </div>
-      <div class="iframe-container">
-          <iframe class="iframe" src="/dsportfolio/project_docs/Recidivism_paper.pdf" width="600" height="400" style="border:none;"></iframe>
-      </div> 
-    </div>  
+  <div id="ml-content" style="display: none;">
+    <div class="container">
+      <div class="centerd-flexbox">
+        <div class="r2"><u>Predicting Recidivism Among Georgia Parolees</u></div>
+        <div class="icon-solo">
+          <a href="https://github.com/RCheung763/Recidivism"><i class="fa-brands fa-github"></i> Recidivism Repo</a>
+        </div>
+        <div class="r3">
+          The objective of this project was develop a model that could predict recidivism among parolees and identify key factors that contributing to repeat offenses, with the goal of informing policies that reduce the likelihood of reoffending. 
+          A focus was made on not only accuracy but importantly reducing the rates of false positive. Gradient boosting and SVM models are developed for this purpose. 
+          A binary and multi-class classification gradient boosting models were used to indicate if a person would reoffend and if so would they reoffend in one, two or three years. 
+          Both the binary and multi-class classification models indicated similar top variables for determining recidivism. The top two variables were percentage of days employed and jobs per year. 
+          Gang affiliation, average number of days on parole between drug tests and supervision score also ranked high in the models. Of the three SVM models run (linear, radial basis and polynomial kernels), 
+          the linear SVM produced the highest accuracy rate and the lowest false positive rate 33%.
+        </div>
+        <div class="iframe-container">
+            <iframe class="iframe" src="/dsportfolio/project_docs/Recidivism_paper.pdf" width="900" height="400" style="border:none;"></iframe>
+        </div> 
+      </div>  
+    </div>
   </div>
 
 
