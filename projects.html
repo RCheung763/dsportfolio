@@ -124,6 +124,12 @@
       text-align: left;
       margin-bottom: 15px;
     }
+    .r4 {
+      font-size: 20px;
+      text-align: left;
+      margin-bottom: 15px;
+      color: blue;
+    }
     .iframe-container {
       display: flex;
       justify-content: center; 
@@ -175,8 +181,16 @@
     <a href="javascript:void(0);" class="btn2" onclick="toggleContent('forecasting-content')">Forecasting</a>
     <a href="javascript:void(0);" class="btn2" onclick="toggleContent('ml-content')">Machine Learning</a>
     <a href="javascript:void(0);" class="btn2" onclick="toggleContent('nlp-content')">Natural Language Processing</a>
+    <a href="javascript:void(0);" class="btn2" onclick="toggleContent('dataviz-content')">Data Visualization</a>
   </div>
-
+  <div id="dataviz-content" style="display: none;">
+    <div class="container">
+      <div class="centered-flexbox">
+        <div class="r4"><u>This Dashboard is getting a glow up! Be right back! -2/4/2025</u></div>
+      </div>
+    </div>
+  </div>
+  
   <div id="nlp-content" style="display: none;">
     <div class="container">
       <div class="centered-flexbox">
@@ -255,7 +269,7 @@
 
 <script>
   function toggleContent(selectedId) {
-    var sections = ["forecasting-content", "ml-content"];
+    var sections = ["forecasting-content", "ml-content", "nlp-content", "dataviz-content"];
 
     sections.forEach(function(id) {
       var section = document.getElementById(id);
