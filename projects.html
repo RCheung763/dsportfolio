@@ -178,6 +178,25 @@
     .main-body {
       font-family: 'Open Sans';
     }
+    p {
+  margin-bottom: 20px; 
+  line-height: 1.6; /* 
+    }
+    table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+    }
+
+th, td {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
   </style>
 </head>
 <body class="main-body">
@@ -282,25 +301,33 @@
           Model Development
         </div>
         <div class="r3">
-          All models except prophet was done in R. The prophet model was built using python programming. 
+          <p>
+          All models except prophet was done in R. The prophet model was built using python programming. In order to use the ARMA model the data needs to be stationary, where the mean and variance is constant across time and autocovariance, which is the difference between values at different time lags depends on the lag and not the specific time. An Augmented Dickey-Fuller test, ADF test, was conducted on the imputed and logged data to check for stationarity. The following is the result of our ADF test. 
+          </p>
 
-In order to use the ARMA model the data needs to be stationary, where the mean and variance is constant across time and autocovariance, which is the difference between values at different time lags depends on the lag and not the specific time. An Augmented Dickey-Fuller test, ADF test, was conducted on the imputed and logged data to check for stationarity. The following is the result of our ADF test. 
-  
-  | Dickey-Fuller | Lag Order | P-Value | 
-  |---------------|-----------|---------|
-  | -4.7          | 5         | 0.01    |
-  
-Our test statistic tells us how far the data is from a unit root. A unit root is a stochastic trend in a time series that indicate that a value will be highly dependent on its past values, the presence of a unit root indicates that it is non-stationary. The negative number suggests that it further far a unit root.  Our alternative hypothesis is stationarity, our p-value is <0.05 so we can reject the null-hypothesis which is that it is non-stationary.
+          <table border="1">
+            <tr>
+              <th>Dickey-Fuller</th>
+              <th>Lag Order</th>
+              <th>P-Value</th>
+            </tr>
+            <tr>
+              <td>-4.7</td>
+              <td>5</td>
+              <td>0.01</td>
+            </tr>
+          </table>
 
-An ACF plot however shows a more gradual decline to zero which suggests non-stationarity. When the data is differenced an ADF test still the ACF no longer suggests non-stationarity, however the PACF still has several significant spikes. 
+          <p>
+          Our test statistic tells us how far the data is from a unit root. A unit root is a stochastic trend in a time series that indicate that a value will be highly dependent on its past values, the presence of a unit root indicates that it is non-stationary. The negative number suggests that it further far a unit root.  Our alternative hypothesis is stationarity, our p-value is <0.05 so we can reject the null-hypothesis which is that it is non-stationary.
+          </p>
+          <p>
+          An ACF plot however shows a more gradual decline to zero which suggests non-stationarity. When the data is differenced an ADF test still the ACF no longer suggests non-stationarity, however the PACF still has several significant spikes. 
+          </p>
 
-<p align="center">
-<img src="Images/acf_plot.png" alt="ACF log" width="500"><br>Figure 5
-</p>
+          <img src="Images/acf_plot.png" alt="ACF log" width="500"><br>Figure 5
+          <img src="Images/pacf_plot.png" alt="PACF log" width="500"><br>Figure 6
 
-<p align="center">
-<img src="Images/pacf_plot.png" alt="PACF log" width="500"><br>Figure 6
-</p>
 
 The autocorrelation function, acf, plot shows suggest that an autoregressive, AR, model may be appropriate. The partial autocorrelation function, PACF, plot suggests that it may be of order 1 or higher.
 
