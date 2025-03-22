@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap">
   <script src="https://kit.fontawesome.com/e14cba48a4.js" crossorigin="anonymous"></script>
   <style>
+    /* Your existing styles remain unchanged */
     .banner {
       padding: 5px; 
       text-align: center;
@@ -170,9 +171,8 @@
       transform: scale(3.5); 
     }
     .main-body {
-      font-family: 'Open Sans
+      font-family: 'Open Sans';
     }
-
   </style>
 </head>
 <body class="main-body">
@@ -184,56 +184,68 @@
   </div>
   
   <div class="banner2">
-    <a href="javascript:void(0);" class="btn2" onclick="toggleContent('forecasting-content')">Forecasting</a>
-    <a href="javascript:void(0);" class="btn2" onclick="toggleContent('ml-content')">Machine Learning</a>
-    <a href="javascript:void(0);" class="btn2" onclick="toggleContent('dl-content')">Deep Learning</a>
-
+    <a href="javascript:void(0);" class="btn2" onclick="toggleMainContent('forecasting-content')">Forecasting</a>
+    <a href="javascript:void(0);" class="btn2" onclick="toggleMainContent('ml-content')">Machine Learning</a>
+    <a href="javascript:void(0);" class="btn2" onclick="toggleMainContent('dl-content')">Deep Learning</a>
   </div>
   
+  <!-- Deep Learning Content -->
   <div id="dl-content" style="display: none;">
     <div class="banner2">
-      <a href="javascript:void(0);" class="btn2" onclick="toggleContent('sentiment-analysis')">Sentiment Analysis</a>
-      <a href="javascript:void(0);" class="btn2" onclick="toggleContent('bird-call')">Bird Call Prediciton</a> 
+      <a href="javascript:void(0);" class="btn2" onclick="toggleSubContent('sentiment-analysis')">Sentiment Analysis</a>
+      <a href="javascript:void(0);" class="btn2" onclick="toggleSubContent('bird-call')">Bird Call Prediction</a> 
     </div>
 
+    <!-- Sentiment Analysis Content -->
+    <div id="sentiment-analysis" style="display: none;">
+      <div class="container">
+        <div class="centered-flexbox">
+          <div class="r2">Sentiment Analysis: Carnivores.com Submissions</div>
 
-  <div id="sentiment-analysis" style="display: none;">
-    <div class="container">
-      <div class="centered-flexbox">
-        <div class="r2">Sentiment Analysis: Carnivores.com Submissions</div>
+          <div class="icon-solo">
+            <a href="https://github.com/RCheung763/Sentiment-Analysis-of-Carnivores.com-Users-Evaluating-Performance-and-Class-Imabalance"><i class="fa-brands fa-github"></i> Carnivores Repo</a>
+          </div> 
 
-        <div class="icon-solo">
-          <a href="https://github.com/RCheung763/Sentiment-Analysis-of-Carnivores.com-Users-Evaluating-Performance-and-Class-Imabalance"><i class="fa-brands fa-github"></i> Carnivores Repo</a>
-        </div> 
+          <div class="r3">
+            The overarching goal of this project was to develop a model capable of classifying these submissions by sentiment, allowing for detailed analysis of the sentiments associated with different carnivore species sighted.  
+            I plan on continually updating this repo as we make progress with this sentiment analysis. A major challenge was the severe class imbalance of positive and negative submissions.  
+            In order to assess how the model performs before acquiring more data, a series of tests was done on different text datasets with varying class balances.  
+            The model achieved its highest performance with 81% accuracy, with a balanced accuracy rate between positive and negative comments.
+          </div>
 
-        <div class="r3">
-          The overarching goal of this project was to develop a model capable of classifying these submissions by sentiment, allowing for detailed analysis of the sentiments associated with different carnivore species sighted.  
-          I plan on continually updating this repo as we make progress with this sentiment analysis. A major challenge was the severe class imbalance of positive and negative submissions.  
-          In order to assess how the model performs before acquiring more data, a series of tests was done on different text datasets with varying class balances.  
-          The model achieved its highest performance with 81% accuracy, with a balanced accuracy rate between positive and negative comments.
+          <div class="iframe-container">
+            <iframe class="iframe" src="/dsportfolio/docs/portfoliocarnivores.html" width="900" height="400" style="border: rgba(0, 0, 0, 0.5);"></iframe>
+          </div> 
         </div>
+      </div>
+    </div>
 
-        <div class="iframe-container">
-          <iframe class="iframe" src="/dsportfolio/docs/portfoliocarnivores.html" width="900" height="400" style="border: rgba(0, 0, 0, 0.5);"></iframe>
-        </div> 
-        
+    <!-- Bird Call Content (placeholder) -->
+    <div id="bird-call" style="display: none;">
+      <div class="container">
+        <div class="centered-flexbox">
+          <div class="r2">Bird Call Prediction</div>
+          <div class="r3">
+            Bird call prediction content goes here.
+          </div>
+        </div>
       </div>
     </div>
   </div>
   
-  
+  <!-- Forecasting Content -->
   <div id="forecasting-content" style="display: none;">
     <div class="container">
       <div class="centered-flexbox">
         <div class="r2">Evaluating Forecasting Models for Predicting Gross Gaming Revenue</div>
         
-          <div class="icon-solo">
-            <a href="https://github.com/RCheung763/Time-Series-Anaylsis-Louisiana-Gaming-Revenue"><i class="fa-brands fa-github"></i> Forecasting Repo</a>
-          </div> 
+        <div class="icon-solo">
+          <a href="https://github.com/RCheung763/Time-Series-Anaylsis-Louisiana-Gaming-Revenue"><i class="fa-brands fa-github"></i> Forecasting Repo</a>
+        </div> 
         
         <div class="r3">
-          The objective of this project is to evaluate and compare forecasting methods to achieve the highest accuracy forecast of the monthly revenue of Harrah’s casino located in New Orleans, Louisiana. 
-          The models considered are ARIMA, ETS, GARCH, and Meta’s Prophet.This dataset posed an interesting problem as it contains two back-to-back outliers. One was a result of COVID lockdown in the spring of 2020 and the second was a result of Hurricane Ida the following year. Outlier detection and imputation was done to handle these shocks. 
+          The objective of this project is to evaluate and compare forecasting methods to achieve the highest accuracy forecast of the monthly revenue of Harrah's casino located in New Orleans, Louisiana. 
+          The models considered are ARIMA, ETS, GARCH, and Meta's Prophet. This dataset posed an interesting problem as it contains two back-to-back outliers. One was a result of COVID lockdown in the spring of 2020 and the second was a result of Hurricane Ida the following year. Outlier detection and imputation was done to handle these shocks. 
           The best performing model was the ARIMA model achieving a low RMSE and a MAPE of 12.3%.
         </div>
         <div class="image-row">
@@ -242,11 +254,11 @@
           <img src="/dsportfolio/images/resid_arima.png" alt="Forecasting Image 3">
           <img src="/dsportfolio/images/six_month_fcast.png" alt="Forecasting Image 4">
         </div>
-        
       </div>
     </div>
   </div>
   
+  <!-- Machine Learning Content -->
   <div id="ml-content" style="display: none;">
     <div class="container">
       <div class="centered-flexbox">
@@ -266,18 +278,23 @@
         </div>
         
         <div class="iframe-container">
-            <iframe class="iframe" src="/dsportfolio/project_docs/Recidivism_paper.pdf" width="900" height="400" style="border:none;"></iframe>
+          <iframe class="iframe" src="/dsportfolio/project_docs/Recidivism_paper.pdf" width="900" height="400" style="border:none;"></iframe>
         </div> 
       </div>  
     </div>
   </div>
 
-  </div>
-
 <script>
-  function toggleContent(selectedId) {
-    var sections = ["forecasting-content", "ml-content", "dl-content", "dataviz-content"];
-
+  // Function to toggle main content sections (Forecasting, Machine Learning, Deep Learning)
+  function toggleMainContent(selectedId) {
+    var sections = ["forecasting-content", "ml-content", "dl-content"];
+    
+    // Reset all sub-content sections when switching main sections
+    var subSections = ["sentiment-analysis", "bird-call"];
+    subSections.forEach(function(id) {
+      document.getElementById(id).style.display = "none";
+    });
+    
     sections.forEach(function(id) {
       var section = document.getElementById(id);
       if (id === selectedId) {
@@ -287,9 +304,21 @@
       }
     });
   }
+  
+  // Function to toggle sub-content sections (Sentiment Analysis, Bird Call)
+  function toggleSubContent(selectedId) {
+    var subSections = ["sentiment-analysis", "bird-call"];
+    
+    subSections.forEach(function(id) {
+      var section = document.getElementById(id);
+      if (id === selectedId) {
+        section.style.display = section.style.display === "block" ? "none" : "block";
+      } else {
+        section.style.display = "none";
+      }
+    });
+  }
 </script>
-
   
 </body>
 </html>
-
