@@ -10,61 +10,34 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap">
   <script src="https://kit.fontawesome.com/e14cba48a4.js" crossorigin="anonymous"></script>
   <style>
-    /* Existing styles */
+    /* Responsive banner with gradient background */
     .banner {
-      position: relative;
       width: 100%;
+      padding: 20px 0;
+      background: linear-gradient(to right, #6b9080, #a4c3b2);
       text-align: center;
-      overflow: hidden;
-    }
-    
-    .banner-image {
-      width: 100%;
-      height: auto;
-      display: block;
-      max-height: 200px; /* Set a maximum height if needed */
-      object-fit: cover; /* This ensures the image covers the container properly */
-    }
-    
-    .banner-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(107, 144, 128, 0.7); /* Semi-transparent overlay with your gradient color */
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      font-family: 'Open Sans';
+      box-sizing: border-box;
     }
     
     .resume-title {
       color: white;
       margin: 0 0 15px 0;
-      z-index: 1;
+      font-size: 36px;
     }
     
-    .banner-buttons {
-      z-index: 1;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    /* For smaller screens, make buttons stack vertically */
-    @media (max-width: 600px) {
-      .banner-buttons {
-        flex-direction: column;
+    /* Media query for smaller screens */
+    @media screen and (max-width: 600px) {
+      .banner {
+        padding: 15px 0;
       }
-      
+      .resume-title {
+        font-size: 28px;
+      }
       .btn {
+        padding: 10px 12px;
         margin: 5px;
-        padding: 10px;
-      }
-      
-      .banner-image {
-        max-height: 150px;
+        font-size: 14px;
       }
     }
     
@@ -111,6 +84,8 @@
     body {
       font-family: 'Open Sans';
       background-color: #f8faf3;
+      margin: 0;
+      padding: 0;
     }
     .centered-flexbox {
       width: 70%;
@@ -189,15 +164,16 @@
     }
 
     iframe {
-      border: 5px solid black; 
+      border: 5px solid black;
+      max-width: 100%;
     }
     .iframe-container:last-child {
       margin-bottom: 50px; 
     }
 
     .image-small {
-      width: 150;
-      height: 150;
+      width: 150px;
+      height: 150px;
       margin-top: 10px;
     }
     .image-row {
@@ -205,6 +181,7 @@
       display: flex;
       align-items: center;
       gap: 15px;
+      flex-wrap: wrap;
     }
 
     .image-row img {
@@ -223,17 +200,11 @@
   </style>
 </head>
 <body class="main-body">
-  <!-- Replace the old banner with new image-based banner -->
   <div class="banner"> 
-    <img src="/dsportfolio/images/banner-background.jpg" alt="Banner Background" class="banner-image">
-    <div class="banner-overlay">
-      <h1 class="resume-title" role="banner">Projects</h1>
-      <div class="banner-buttons">
-        <a href="/dsportfolio/" class="btn">Home</a>
-        <a href="/dsportfolio/ResumeCheung.pdf" class="btn">Resume</a>
-        <a href="/dsportfolio/publications.html" class="btn">Publications</a>
-      </div>
-    </div>
+    <h1 class="resume-title" role="banner">Projects</h1>
+    <a href="/dsportfolio/" class="btn">Home</a>
+    <a href="/dsportfolio/ResumeCheung.pdf" class="btn">Resume</a>
+    <a href="/dsportfolio/publications.html" class="btn">Publications</a>
   </div>
   
   <div class="banner2">
@@ -242,7 +213,6 @@
     <a href="javascript:void(0);" class="btn2" onclick="toggleMainContent('dl-content')">Deep Learning</a>
   </div>
   
-  <!-- The rest of your content remains the same -->
   <!-- Deep Learning Content -->
   <div id="dl-content" style="display: none;">
     <div class="banner2">
