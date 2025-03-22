@@ -134,6 +134,11 @@
       color: 	rgb(80, 133, 188);
       text-decoration: none;
     }
+    .r5 {
+      font-size: 20px;
+      text-align: left;
+      margin-bottom: 15px;
+    }
     .iframe-container {
       display: flex;
       justify-content: center; 
@@ -242,12 +247,25 @@
         <div class="icon-solo">
           <a href="https://github.com/RCheung763/Time-Series-Anaylsis-Louisiana-Gaming-Revenue"><i class="fa-brands fa-github"></i> Forecasting Repo</a>
         </div> 
-        
+
+        <div class="r5">
+          Motivation
+        </div>
         <div class="r3">
           The objective of this project is to evaluate and compare forecasting methods to achieve the highest accuracy forecast of the monthly revenue of Harrah's casino located in New Orleans, Louisiana. 
           The models considered are ARIMA, ETS, GARCH, and Meta's Prophet. This dataset posed an interesting problem as it contains two back-to-back outliers. One was a result of COVID lockdown in the spring of 2020 and the second was a result of Hurricane Ida the following year. Outlier detection and imputation was done to handle these shocks. 
           The best performing model was the ARIMA model achieving a low RMSE and a MAPE of 12.3%.
         </div>
+        <div class="r5">
+          Methodology
+        </div>
+        <div class="r3">
+          Data 
+          
+          The dataset was created from the monthly revenue reports provided by the <a href="https://lgcb.dps.louisiana.gov/revenue_reports.htm" target="_blank">Louisiana Gaming Control Board</a>. The dataset is composed of the reported monthly gross gaming revenue from Harrah's casino spanning from January 2007 to September 2024, totaling 213 data points. 
+        </div>
+
+        
         <div class="image-row">
           <img src="/dsportfolio/images/plot_raw.png" alt="Forecasting Image 1">
           <img src="/dsportfolio/images/plot_raw_year.png" alt="Forecasting Image 2">
