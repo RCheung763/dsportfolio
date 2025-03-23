@@ -634,45 +634,57 @@ th {
 </div>
 
 <script>
-  function toggleMainContent(selectedId) {
+function toggleMainContent(selectedId) {
     var sections = ["forecasting-content", "ml-content", "dl-content"];
-    var subSections = ["sentiment-analysis", "bird-call", "recidivism", "housing"];
-
     
-    subSections.forEach(function (id) {
-      var section = document.getElementById(id);
-      if (section) {
-        section.style.display = "none";
-      }
+    sections.forEach(function(id) {
+        var section = document.getElementById(id);
+        if (id === selectedId) {
+            section.style.display = section.style.display === "block" ? "none" : "block";
+        } else {
+            section.style.display = "none";
+        }
     });
 
-    
-    sections.forEach(function (id) {
-      var section = document.getElementById(id);
-      if (section) {
-        section.style.display = id === selectedId ? "block" : "none";
-      }
-    });
-  }
-
-  function toggleSubContent(selectedId) {
-    var subSections = ["sentiment-analysis", "bird-call", "recidivism", "housing"];
-
-    subSections.forEach(function (id) {
-      var section = document.getElementById(id);
-      if (section) {
-        section.style.display = id === selectedId && section.style.display !== "block" ? "block" : "none";
-      }
-    });
-
-    
-    var mlContent = document.getElementById("ml-content");
-    if (mlContent) {
-      mlContent.style.display = "block";
+    // Hide ML-specific subsections unless ML content is active
+    if (selectedId !== "ml-content") {
+        var mlSubSections = ["recidivism", "housing"];
+        mlSubSections.forEach(function(id) {
+            document.getElementById(id).style.display = "none";
+        });
     }
 
-    console.log("Toggled section:", selectedId); 
-  }
+    // Hide DL-specific subsections unless DL content is active
+    if (selectedId !== "dl-content") {
+        var dlSubSections = ["sentiment-analysis", "bird-call"];
+        dlSubSections.forEach(function(id) {
+            document.getElementById(id).style.display = "none";
+        });
+    }
+}
+
+function toggleSubContent(selectedId) {
+    // Define all subsection groups
+    var allSubSections = {
+        "ml-content": ["recidivism", "housing"],
+        "dl-content": ["sentiment-analysis", "bird-call"]
+    };
+
+    // Detect which group the selectedId belongs to
+    var activeGroup = Object.values(allSubSections).find(group => group.includes(selectedId));
+
+    if (activeGroup) {
+        activeGroup.forEach(function(id) {
+            var section = document.getElementById(id);
+            if (id === selectedId) {
+                section.style.display = section.style.display === "block" ? "none" : "block";
+            } else {
+                section.style.display = "none";
+            }
+        });
+    }
+}
+
 </script>
   
 </body>
