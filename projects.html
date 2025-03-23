@@ -488,7 +488,7 @@ th {
                       <td>0.00001</td>
                     </tr>
                       <tr>
-                        <td>*ARIMA*</td>
+                        <td>ARIMA</td>
                         <td>0.07</td>
                         <td>0.78</td>
                       </tr>
@@ -581,9 +581,7 @@ th {
                     </div>
 
                   
-                </div>
-                
-          
+                </div>        
         </div>
       </div>
     </div>
@@ -620,7 +618,7 @@ th {
   function toggleMainContent(selectedId) {
     var sections = ["forecasting-content", "ml-content", "dl-content"];
     
-    var subSections = ["sentiment-analysis", "bird-call"];
+    var subSections = ["sentiment-analysis", "bird-call", "recidivism", "housing"];
     subSections.forEach(function(id) {
       document.getElementById(id).style.display = "none";
     });
@@ -636,7 +634,7 @@ th {
   }
   
   function toggleSubContent(selectedId) {
-    var subSections = ["sentiment-analysis", "bird-call"];
+    var subSections = ["sentiment-analysis", "bird-call", "recidivism", "housing"];
     
     subSections.forEach(function(id) {
       var section = document.getElementById(id);
