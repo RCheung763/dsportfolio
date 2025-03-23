@@ -590,7 +590,7 @@ th {
   <!-- Machine Learning Content -->
   
   <div id="ml-content" style="display: none;">
-    <div class="container">
+    <div class="banner2">
         <a href="javascript:void(0);" class="btn2" onclick="toggleSubContent('recidivism')">Recidivism</a>
         <a href="javascript:void(0);" class="btn2" onclick="toggleSubContent('housing')">Housing</a>
     </div>
@@ -628,7 +628,7 @@ th {
     var sections = ["forecasting-content", "ml-content", "dl-content"];
     var subSections = ["sentiment-analysis", "bird-call", "recidivism", "housing"];
 
-    // Hide all sub-sections when switching main content
+    
     subSections.forEach(function (id) {
       var section = document.getElementById(id);
       if (section) {
@@ -636,7 +636,7 @@ th {
       }
     });
 
-    // Show or hide the selected main section
+    
     sections.forEach(function (id) {
       var section = document.getElementById(id);
       if (section) {
@@ -655,13 +655,13 @@ th {
       }
     });
 
-    // Ensure ml-content stays visible
+    
     var mlContent = document.getElementById("ml-content");
     if (mlContent) {
       mlContent.style.display = "block";
     }
 
-    console.log("Toggled section:", selectedId); // Debugging log
+    console.log("Toggled section:", selectedId); 
   }
 </script>
   
