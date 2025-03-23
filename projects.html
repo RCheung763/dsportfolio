@@ -310,7 +310,7 @@ th {
                   An Augmented Dickey-Fuller test, ADF test, was conducted on the imputed and logged data to check for stationarity. The following is the result of our ADF test. 
                 </p>
 
-                  <table border="1">
+                  <table border="1" align="center">
                     <tr>
                       <th>Dickey-Fuller</th>
                       <th>Lag Order</th>
@@ -356,7 +356,7 @@ th {
             <div class="r5">Model Evaluation</div>
               <p>Horizon: 1-month</p>
                 
-                <table border="1">
+                <table border="1" align="center">
                   <tr>
                     <th>Model</th>
                     <th>RMSE</th>
@@ -391,7 +391,7 @@ th {
           
                 <p>Horizon: 6-month</p>
           
-                  <table border="1">
+                  <table border="1" align="center">
                     <tr>
                       <th>Model</th>
                       <th>RMSE</th>
@@ -426,7 +426,7 @@ th {
 
               <p>Horizon: 12-month</p>
           
-                <table border="1">
+                <table border="1" align="center">
                   <tr>
                     <th>Model</th>
                     <th>RMSE</th>
@@ -457,7 +457,7 @@ th {
                             <td>5,282,748</td>
                             <td>32.90%</td>
                         </tr>
-              </table>
+              </table><br>
                 
             <div class="r5">Residusl Analysis</div>
                 <div class="r3">
@@ -466,17 +466,17 @@ th {
                     that are uncorrelated which tells us that the models have captured all the information from the data. The other important properties is to see if 
                     residuals center around zero which tells us whether the forecast is biased or not. 
                   </p>
-                    <p align="center"><img src="Images/ets_resid_plot.png" alt="ETS Residuals" width="500"><br>Figure 8 ETS Residual Diagnosis</p><br>
-                    <p align="center"><img src="Images/arima_resid_plot.png" alt="ARIMA Residuals" width="500"><br>Figure 9 ARIMA Residual Diagnosis</p>
+                    <p align="center"><img src="images/ets_resid_plot.png" alt="ETS Residuals" width="500"><br>Figure 8 ETS Residual Diagnosis</p><br>
+                    <p align="center"><img src="images/arima_resid_plot.png" alt="ARIMA Residuals" width="500"><br>Figure 9 ARIMA Residual Diagnosis</p>
 
                   <p>
                     For the prophet model, I manually plotted the residuals to inspect for a mean around zero. Figure 10 is the residual plot from the Prophet Model. 
                     Apart from the outliers as a result of shocks from COVID and Hurricane IDA it does stay fairly centered around zero for all models. 
                   </p>
 
-                    <p align="center"><img src="Images/prophet_resid_plot.png" alt="ETS Residuals" width="500"><br>Figure 10 Prophet Residual Diagnosis</p>
+                    <p align="center"><img src="images/prophet_resid_plot.png" alt="ETS Residuals" width="500"><br>Figure 10 Prophet Residual Diagnosis</p>
 
-                  <table border="1">
+                  <table border="1" align="center">
                   <tr>
                     <th>Model</th>
                     <th>Ljung-Box Statistic</th>
@@ -507,7 +507,7 @@ th {
                   The following are the results from the model trained using 90% of the dataset and tested using the remaining 10% of the dataset. The test set has 
                   22 observations from December 2022 to September 2024. Across all metrics the prophet model performes the best. 
                 </p>
-                  <table border="1">
+                  <table border="1" align="center">
                   <tr>
                     <th>Model</th>
                     <th>RMSE</th>
@@ -545,9 +545,9 @@ th {
                         Moving forward using the ARIMA model for a six-month forecast. Figure 11 is a plot of the 6-month forecast for Harrah's.
                       </p>
 
-                      <p align="center"><img src="Images/six_month_fcast.png" alt="Six Month Forecast" width="500"><br>Figure 11 6-Month Forecast</p>
+                      <p align="center"><img src="images/six_month_fcast.png" alt="Six Month Forecast" width="500"><br>Figure 11 6-Month Forecast</p>
 
-                      <table border="1">
+                      <table border="1" align="center">
                   <tr>
                     <th>Model</th>
                     <th>Revenu</th>
