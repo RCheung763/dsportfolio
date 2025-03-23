@@ -624,36 +624,44 @@ th {
 </div>
 
 <script>
-  
   function toggleMainContent(selectedId) {
     var sections = ["forecasting-content", "ml-content", "dl-content"];
-    
     var subSections = ["sentiment-analysis", "bird-call", "recidivism", "housing"];
-    subSections.forEach(function(id) {
-      document.getElementById(id).style.display = "none";
-    });
-    
-    sections.forEach(function(id) {
+
+    // Hide all sub-sections when switching main content
+    subSections.forEach(function (id) {
       var section = document.getElementById(id);
-      if (id === selectedId) {
-        section.style.display = section.style.display === "block" ? "none" : "block";
-      } else {
+      if (section) {
         section.style.display = "none";
+      }
+    });
+
+    // Show or hide the selected main section
+    sections.forEach(function (id) {
+      var section = document.getElementById(id);
+      if (section) {
+        section.style.display = id === selectedId ? "block" : "none";
       }
     });
   }
-  
+
   function toggleSubContent(selectedId) {
     var subSections = ["sentiment-analysis", "bird-call", "recidivism", "housing"];
-    
-    subSections.forEach(function(id) {
+
+    subSections.forEach(function (id) {
       var section = document.getElementById(id);
-      if (id === selectedId) {
-        section.style.display = section.style.display === "block" ? "none" : "block";
-      } else {
-        section.style.display = "none";
+      if (section) {
+        section.style.display = id === selectedId && section.style.display !== "block" ? "block" : "none";
       }
     });
+
+    // Ensure ml-content stays visible
+    var mlContent = document.getElementById("ml-content");
+    if (mlContent) {
+      mlContent.style.display = "block";
+    }
+
+    console.log("Toggled section:", selectedId); // Debugging log
   }
 </script>
   
