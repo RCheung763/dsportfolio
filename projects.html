@@ -324,20 +324,22 @@ th {
           <p>
           An ACF plot however shows a more gradual decline to zero which suggests non-stationarity. When the data is differenced an ADF test still the ACF no longer suggests non-stationarity, however the PACF still has several significant spikes. 
           </p>
-
+          
           <img src="Images/acf_plot.png" alt="ACF log" width="500"><br>Figure 5
+          
           <img src="Images/pacf_plot.png" alt="PACF log" width="500"><br>Figure 6
 
+          <p>The autocorrelation function, acf, plot shows suggest that an autoregressive, AR, model may be appropriate. The partial autocorrelation function, PACF, 
+            plot suggests that it may be of order 1 or higher. The autocorrelation function, acf, plot shows suggest that an autoregressive, AR, model may be appropriate. 
+            The partial autocorrelation function, PACF, plot suggests that it may be of order 1 or higher. The ETS and Prophet models do not require stationarity, as it models trends, seasonality and other non-stationary underlying structures directly. So an ADF test is no necessary.
+          </p>
 
-The autocorrelation function, acf, plot shows suggest that an autoregressive, AR, model may be appropriate. The partial autocorrelation function, PACF, plot suggests that it may be of order 1 or higher.
+          <p> The first training set is composed of 90% of our data and the test set is the remaining 10%.  Cross validation was done by creating multiple training 
+            sets from the training set. The first training set will to forecast each subsequent data point, the next training set will add the next datapoint in 
+            the series creating a data set of 171 observations, the next 172, and so on. Forecast accuracy is computed by averaging over the test
+          </p>
 
-The ETS and Prophet models do not require stationarity, as it models trends, seasonality and other non-stationary underlying structures directly. So an ADF test is no necessary.
-
-The first training set is composed of 90% of our data and the test set is the remaining 10%.  Cross validation was done by creating multiple training sets from the training set. The first training set will to forecast each subsequent data point, the next training set will add the next datapoint in the series creating a data set of 171 observations, the next 172, and so on. Forecast accuracy is computed by averaging over the test Figure 7 illustrates this where blue are the training sets and the orange are the test sets. One illustrates forecast 1 step ahead and the other 4 steps ahead. 
-
-<p align="center">
-<img src="Images/cv1-1.png" width="400"><img src="Images/cv4-1.png" width="400"><br>Figure 7
-</p>
+          
         </div>
         <div class="image-row">
           <img src="/dsportfolio/images/plot_raw.png" alt="Forecasting Image 1">
