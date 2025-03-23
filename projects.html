@@ -588,8 +588,16 @@ th {
   </div>
   
   <!-- Machine Learning Content -->
+  
   <div id="ml-content" style="display: none;">
     <div class="container">
+        <a href="javascript:void(0);" class="btn2" onclick="toggleSubContent('recidivism')">Recidivism</a>
+        <a href="javascript:void(0);" class="btn2" onclick="toggleSubContent('housing')">Housing</a>
+    </div>
+
+    <!--Recidivism Content -->
+      <div id="recidivism" style="display: none;">
+        <div class="container">
       <div class="centered-flexbox">
         <div class="r2">Predicting Recidivism Among Georgia Parolees</div>
         
@@ -608,10 +616,12 @@ th {
         
         <div class="iframe-container">
           <iframe class="iframe" src="/dsportfolio/project_docs/Recidivism_paper.pdf" width="900" height="400" style="border:none;"></iframe>
-        </div> 
+        </div>
+      </div>
       </div>  
     </div>
   </div>
+</div>
 
 <script>
   
