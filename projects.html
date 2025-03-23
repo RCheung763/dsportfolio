@@ -590,7 +590,7 @@ th {
   <div id="ml-content" style="display: none;">
     <div class="banner2">
         <a href="javascript:void(0);" class="btn2" onclick="toggleSubContent('recidivism')">Recidivism</a>
-        <a href="javascript:void(0);" class="btn2" onclick="toggleSubContent('housing')">Housing</a>
+        <a href="javascript:void(0);" class="btn2" onclick="toggleSubContent('wholesale')">Wholesale</a>
     </div>
 
     <!--Recidivism Content -->
@@ -620,6 +620,13 @@ th {
             </p>
           <div class="r5">Methodology</div>
             <p>
+              Utilizing recidivism data from the Georgia Department of Community Supervision, supervised models were created to learn what variables could lead to recidivism and test if models
+              could predict recidivism with high accuracy. Unsupervised learning was run to determine if clusters could answer any questions toward optimal variables. While 4 key 
+              principal components and 11 KMeans clusters were identified this would only explain usefulness of continuous variables in the dataset. Following this analysis of the continuous 
+              variables, Gradient Boosting and Support Vector Machine (SVM) models were created.
+            </p>
+          <div class="r5">Results and Discussion</div>
+            <p>
               
             </p>
         </div>
@@ -648,7 +655,7 @@ function toggleMainContent(selectedId) {
 
     // Hide ML-specific subsections unless ML content is active
     if (selectedId !== "ml-content") {
-        var mlSubSections = ["recidivism", "housing"];
+        var mlSubSections = ["recidivism", "wholesale"];
         mlSubSections.forEach(function(id) {
             document.getElementById(id).style.display = "none";
         });
@@ -666,7 +673,7 @@ function toggleMainContent(selectedId) {
 function toggleSubContent(selectedId) {
     // Define all subsection groups
     var allSubSections = {
-        "ml-content": ["recidivism", "housing"],
+        "ml-content": ["recidivism", "wholesale"],
         "dl-content": ["sentiment-analysis", "bird-call"]
     };
 
