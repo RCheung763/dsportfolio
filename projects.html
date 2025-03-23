@@ -466,15 +466,15 @@ th {
                     that are uncorrelated which tells us that the models have captured all the information from the data. The other important properties is to see if 
                     residuals center around zero which tells us whether the forecast is biased or not. 
                   </p>
-                    <img src="Images/ets_resid_plot.png" alt="ETS Residuals" width="500"><br>Figure 8 ETS Residual Diagnosis
-                    <img src="Images/arima_resid_plot.png" alt="ETS Residuals" width="500"><br>Figure 9 ARIMA Residual Diagnosis
+                    <p align="center"><img src="Images/ets_resid_plot.png" alt="ETS Residuals" width="500"><br>Figure 8 ETS Residual Diagnosis</p><br>
+                    <p align="center"><img src="Images/arima_resid_plot.png" alt="ARIMA Residuals" width="500"><br>Figure 9 ARIMA Residual Diagnosis</p>
 
                   <p>
                     For the prophet model, I manually plotted the residuals to inspect for a mean around zero. Figure 10 is the residual plot from the Prophet Model. 
                     Apart from the outliers as a result of shocks from COVID and Hurricane IDA it does stay fairly centered around zero for all models. 
                   </p>
 
-                  <img src="Images/prophet_resid_plot.png" alt="ETS Residuals" width="500"><br>Figure 10 Prophet Residual Diagnosis
+                    <p align="center"><img src="Images/prophet_resid_plot.png" alt="ETS Residuals" width="500"><br>Figure 10 Prophet Residual Diagnosis</p>
 
                   <table border="1">
                   <tr>
@@ -502,8 +502,84 @@ th {
                             <td>19.80</td>
                             <td>0.031</td>
                         </tr>
+                  </table>
+                <p>
+                  The following are the results from the model trained using 90% of the dataset and tested using the remaining 10% of the dataset. The test set has 
+                  22 observations from December 2022 to September 2024. Across all metrics the prophet model performes the best. 
+                </p>
+                  <table border="1">
+                  <tr>
+                    <th>Model</th>
+                    <th>RMSE</th>
+                    <th>MAE</th>
+                    <th>MAPE</th>
+                  </tr>
+                    <tr>
+                      <td>Mean</td>
+                      <td>2,947,411</td>
+                      <td>2,349,928</td>
+                      <td>12.78%</td>
+                    </tr>
+                      <tr>
+                        <td>ARIMA</td>
+                        <td>2,816,615</td>
+                        <td>2,274,886</td>
+                        <td>12.30%</td>
+                      </tr>
+                        <tr>
+                          <td>ETS</td>
+                          <td>3,992,650</td>
+                          <td>3,609,188</td>
+                          <td>18.91%</td>
+                        </tr>
+                          <tr>
+                            <td>Prophet</td>
+                            <td>2,119,691</td>
+                            <td>1,723,205</td>
+                            <td>5.52%</td>
+                        </tr>
+                  </table>
+                  <div class="r5">Residusl Analysis</div>
+                    <div class="r3">
+                      <p>
+                        Moving forward using the ARIMA model for a six-month forecast. Figure 11 is a plot of the 6-month forecast for Harrah's.
+                      </p>
+
+                      <p align="center"><img src="Images/six_month_fcast.png" alt="Six Month Forecast" width="500"><br>Figure 11 6-Month Forecast</p>
+
+                      <table border="1">
+                  <tr>
+                    <th>Model</th>
+                    <th>Revenu</th>
+                  </tr>
+                    <tr>
+                      <td>2024 Oct</td>
+                      <td>18,028,886</td>
+                    </tr>
+                      <tr>
+                        <td>2024 Nov</td>
+                        <td>18,830,544</td>
+                      </tr>
+                        <tr>
+                          <td>2024 Dec</td>
+                          <td>18,164,272</td>
+                        </tr>
+                        <tr>
+                          <td>2025 Jan</td>
+                          <td>19,670,769</td>
+                        </tr>
+                      <tr>
+                        <td>2025 Feb</td>
+                        <tc>18,902,990</tc>
+                      </tr>
+                    <tr>
+                      <td>2025 Mar</td>
+                      <td>19,621,175</td>
+                    </tr>
+                          
               </table>
-                  
+                    </div>
+
                   
                 </div>
                 
