@@ -263,7 +263,7 @@ th {
       <div class="centered-flexbox">
         <div class="r2">Evaluating Forecasting Models for Predicting Gross Gaming Revenue</div>
         
-          <div class="icon-solo"><a href="https://github.com/RCheung763/Time-Series-Anaylsis-Louisiana-Gaming-Revenue"><i class="fa-brands fa-github"></i> Forecasting Repo</a></div> 
+          <div class="icon-solo"><a href="https://github.com/RCheung763/Time-Series-Anaylsis-Louisiana-Gaming-Revenue"><i class="fa-brands fa-github"></i> Forecasting Repo and Report</a></div> 
 
             <div class="r5">Motivation</div>
               <div class="r3">
@@ -334,10 +334,10 @@ th {
                     non-stationarity, however the PACF still has several significant spikes. 
                   </p>
           
-                      <img src="images/acf_plot.png" alt="ACF log" width="500" align="center"><br>
+                      <p align="center"><img src="images/acf_plot.png" alt="ACF log" width="500" align="center"></p><br>
                         <p align="center">Figure 5</p>
           
-                      <img src="images/pacf_plot.png" alt="PACF log" width="500" align="center"><br>
+                      <p align="center"><img src="images/pacf_plot.png" alt="PACF log" width="500" align="center"></p><br>
                         <p align="center">Figure 5</p>
 
                     <p>
@@ -579,8 +579,6 @@ th {
                           
               </table>
                     </div>
-
-                  
                 </div>        
         </div>
       </div>
@@ -606,12 +604,24 @@ th {
         </div>
         
         <div class="r3">
-          The objective of this project was develop a model that could predict recidivism among parolees and identify key factors that contributing to repeat offenses, with the goal of informing policies that reduce the likelihood of reoffending. 
-          A focus was made on not only accuracy but importantly reducing the rates of false positive. Gradient boosting and SVM models are developed for this purpose. 
-          A binary and multi-class classification gradient boosting models were used to indicate if a person would reoffend and if so would they reoffend in one, two or three years. 
-          Both the binary and multi-class classification models indicated similar top variables for determining recidivism. The top two variables were percentage of days employed and jobs per year. 
-          Gang affiliation, average number of days on parole between drug tests and supervision score also ranked high in the models. Of the three SVM models run (linear, radial basis and polynomial kernels), 
-          the linear SVM produced the highest accuracy rate and the lowest false positive rate.
+          <div class="r5">Motivation</div>
+            <p>
+              The objective of this project was develop a model that could predict recidivism among parolees and identify 
+              key factors that contributing to repeat offenses, with the goal of informing policies that reduce the likelihood of reoffending. 
+              Gradient boosting and SVM models are developed for this purpose.
+            </p>
+          <div class="r5">Data</div>
+            <p>
+              The data used is provided by the Georgia Department of Community Supervision. This data includes information about persons released from prison to 
+              parole supervision from January 1, 2013 to December 31, 2015. The original dataset includes 54 fields and 25.8K rows where each row is a record for one 
+              individual. After preprocessing the dataset contained 14,170 males and 2,028 females. There are 48 variables that record demographic information such as 
+              race and education, information on arrest record, the age of release, prior convictions, and employment information after release. Outcome variables considered 
+              are Boolean variables for arrests in year 1, 2 or 3 and arrest within 3 years. 
+            </p>
+          <div class="r5">Methodology</div>
+            <p>
+              
+            </p>
         </div>
         
         <div class="iframe-container">
