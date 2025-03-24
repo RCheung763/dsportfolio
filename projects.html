@@ -606,7 +606,7 @@ th {
         <div class="r3">
           <div class="r5">Motivation</div>
             <p>
-              The objective of this project was develop a model that could predict recidivism among parolees and identify 
+              The objective of this project was develop a model that could identify 
               key factors that contributing to repeat offenses, with the goal of informing policies that reduce the likelihood of reoffending. 
               Gradient boosting and SVM models are developed for this purpose.
             </p>
@@ -623,9 +623,19 @@ th {
               Utilizing recidivism data from the Georgia Department of Community Supervision, supervised models were created to learn what variables could lead to recidivism and test if models
               could predict recidivism with high accuracy. Unsupervised learning was run to determine if clusters could answer any questions toward optimal variables. While 4 key 
               principal components and 11 KMeans clusters were identified this would only explain usefulness of continuous variables in the dataset. Following this analysis of the continuous 
-              variables, Gradient Boosting and Support Vector Machine (SVM) models were created.
+              variables, Gradient Boosting and Support Vector Machine (SVM) models were created.A binary classification model was developed to predict recidivism, alongside a multiclass model to classify individuals into four categories: no recidivism, recidivism within one year, 
+              two years, or three years.
             </p>
           <div class="r5">Results and Discussion</div>
+            <p>
+              n both models, the top two predictors were percentage of days employed and jobs per year. Other highly influential variables included gang affiliation, average number of days on 
+              parole between drug tests, and supervision score.
+            </p>>
+            <p>
+              Of all models tested, the model that achieved the highest accuracy was the gradient boosted model at 74% accuracy. However the false positive rate
+              was almost 40%. The model that acheived the lowest false positive rate is 33.4%, with a 73% accuracy. While the preiction of recidivism is ultimately not the goal of this project, accuracy is 
+              and low false accuracy rate is of highest importance for a reliable model. Further data collection and testing may be needed to achicheve higher accuracy and lower false positive rates.  
+            </p>
             <p>
               
             </p>
