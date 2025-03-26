@@ -250,6 +250,9 @@ th {
       <div class="container">
         <div class="centered-flexbox">
           <div class="r2">Preprocessing to Improve Bird Call Prediction</div>
+          
+          <div class="icon-solo"><a href="https://https://github.com/RCheung763/Bird-Call-Recognition-Using-Deep-Learning"><i class="fa-brands fa-github"></i> Forecasting Repo and Report</a></div> 
+
             <div class="r5">Motivation</div>
               <div class="r3">
                 To improve upon a bird call prediction model different preprocessing techniques were deployed. Converting spectrograms to Mel Spectrograms, data augmentation through
@@ -277,13 +280,14 @@ th {
 
                 <p>
                   A sequential CNN model was built for multiclass prediction. Hypertuning parameters utilized were dropout layers, L2 regularizers, and early stopping that monitors validation loss.
-                  The data set was split into a training, test, and validation set. 
+                  The data set was split into a training, test, and validation set. Since there is resampling, the splits for the improved model are done so that there is no data leakage. 
                 </p>
               </div>
             <div class="r5">Results and Discussion</div>
               <div class="r3">
+                <p>The results show significant improvement with the added preprocessing as shown below.</p>
                 <p>Model without added preprocessing</p>
-                   <table>
+                   <table border="1" align="center">
                      <tr>
                        <th> </th>
                        <th>Accuracy</th>
@@ -308,7 +312,36 @@ th {
                    </table>
                 <p>Accuracy/loss Plots</p>
                 <p align="center"><img src="images/model1_plots.png" alt="loss" width="300" align="center"></p>
-                <p align="center"><img src="images/model1_plots.png" alt="accuracy" width="300" align="center"></p><br>
+                <p>Improved Model</p>
+                  <div class="r3">
+                    <table border="1" align="center">
+                     <tr>
+                       <th> </th>
+                       <th>Accuracy</th>
+                       <th>Precision</th>
+                       <th>Recall</th>
+                       <th>F1-Score</th>
+                     </tr>
+                       <tr>
+                         <th>Training</th>
+                         <th>.65</th>
+                         <th>.72</th>
+                         <th>.65</th>
+                         <th>.67</th>
+                       </tr>
+                         <tr>
+                           <th>Test</th>
+                           <th>.61</th>
+                           <th>.70</th>
+                           <th>.61</th>
+                           <th>.62</th>
+                         </tr>
+                   </table>
+                    <p>Accuracy/loss Plots</p><br>
+                      <p align="center"><img src="images/model1_plots.png" alt="loss" width="300" align="center"></p>
+                    <p>Confusion Matrix</p><br>
+                      <p align="center"><img src="images/model1_plots.png" alt="loss" width="300" align="center"></p>
+                  </div>
               </div>
         </div>
       </div>
@@ -360,7 +393,7 @@ th {
                 </p>
 
         </div>
-          <div class="r5">Model Development</div>
+          <div class="r5">Methodology</div>
               <div class="r3">
                 <p>
                   All models except prophet was done in R. The prophet model was built using python programming. In order to use the ARMA model the data needs to be stationary, where the 
@@ -517,7 +550,7 @@ th {
                         </tr>
               </table><br>
                 
-            <div class="r5">Residusl Analysis</div>
+            <div class="r5">Residual Analysis</div>
                 <div class="r3">
                   <p>
                     In addition to the cross-validation results, I looked at innovation residuals to evaluate these forecasting methods. What we look for are residuals 
@@ -597,7 +630,7 @@ th {
                             <td>5.52%</td>
                         </tr>
                   </table>
-                  <div class="r5">Residual Analysis</div>
+                  <div class="r5">Results</div>
                     <div class="r3">
                       <p>
                         Moving forward using the ARIMA model for a six-month forecast. Figure 11 is a plot of the 6-month forecast for Harrah's.
